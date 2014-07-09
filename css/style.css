@@ -301,11 +301,11 @@ body {
 
 
 .sort-controls .button:hover {
-    background-color: #eee;
+    background-color: #f2faff;
 }
 
 .sort-controls .button.active {
-    background-color: #ddd;
+    background-color: #e2eaff;
 }
 
 
