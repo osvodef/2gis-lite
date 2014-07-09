@@ -75,9 +75,6 @@ angular.module('dgliteSidebar').directive('sidebar', ['apiRequest', '$timeout', 
                     $scope.searchStatus = 'error';
                     resetSearchResult();
                 })
-                .atLast(function() {
-
-                })
                 .call();
         }
 

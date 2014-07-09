@@ -8,14 +8,12 @@ module.exports = function(grunt) {
             allJs: {
                 src: [
                     'bower_components/jquery/dist/jquery.js',
-                    'bower_components/baron/baron.js',
                     'bower_components/angular/angular.js',
                     'bower_components/angular-animate/angular-animate.js',
                     'bower_components/angular-sanitize/angular-sanitize.js',
 
                     'js/app.js',
                     'js/controllers/AppCtrl.js',
-                    'js/directives/baronScroller.js',
                     'js/directives/infiniteScroller.js',
                     'js/directives/map.js',
                     'js/directives/minicard.js',

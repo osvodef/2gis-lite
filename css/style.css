@@ -330,45 +330,13 @@ body {
 }
 
 
-.scroller-clipper {    
+.infinite-scroller {    
     position: absolute;
     top: 40px;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
-}
-
-.scroller {
     overflow-y: scroll;
-    height: 100%;
-}
-
-.scroller::-webkit-scrollbar {
-    width: 0;
-}
-
-.scroller__track {
-    display: none;
-    position: absolute;
-    right: 4px;
-    top: 10px;
-    bottom: 4px;
-    width: 8px;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.baron .scroller__track {
-    display: block;
-}
-
-.scroller__bar {
-    position: absolute;    
-    z-index: 1;
-    right: 0;
-    width: 8px;
-    background: #b4afb4;
-    opacity: 0.6;
 }
 
 .loading-indicator {

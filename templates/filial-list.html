@@ -3,42 +3,35 @@
         Организации <span class="total" ng-bind-html="apiTotal.toString();"></span> 
     </div>
 
-    <div class="scroller-clipper">
-        <div
-            class="scroller"
-            baron-scroller
-            infinite-scroller="addPage()"
-            can-load="isPageLoadingEnabled">
+    <div
+        class="infinite-scroller"
+        infinite-scroller="addPage()"
+        can-load="isPageLoadingEnabled">
 
-            <div class="sort-controls clearfix">
-                <button class="button sort-relevance-btn pull-left" ng-click="setSort('relevance')">По релевантности</button>
-                <button class="button sort-name-btn pull-left" ng-click="setSort('name')">по названию</button>
-                <button class="button filter-btn pull-right" ng-click="toggleViewportFiltering()">Видимые на карте</button>
+        <div class="sort-controls clearfix">
+            <button class="button sort-relevance-btn pull-left" ng-click="setSort('relevance')">По релевантности</button>
+            <button class="button sort-name-btn pull-left" ng-click="setSort('name')">по названию</button>
+            <button class="button filter-btn pull-right" ng-click="toggleViewportFiltering()">Видимые на карте</button>
+        </div>
+
+        <div class="filial-list">
+            <div class="results-header" ng-if="isViewportFilteringEnabled">
+                На карте <span class="total" ng-bind-html="inViewportCnt.toString();"></span>
             </div>
 
-            <div class="filial-list">
-                <div class="results-header" ng-if="isViewportFilteringEnabled">
-                    На карте <span class="total" ng-bind-html="inViewportCnt.toString();"></span>
-                </div>
+            <ul><minicard ng-hide="isViewportFilteringEnabled && !isVisibleOnMap[$index]"></minicard></ul>
 
-                <ul><minicard ng-hide="isViewportFilteringEnabled && !isVisibleOnMap[$index]"></minicard></ul>
-
-                <div class="results-header" ng-if="isViewportFilteringEnabled">
-                    Не на карте
-                </div>
-
-                <ul ng-if="isViewportFilteringEnabled">
-                    <minicard ng-hide="isVisibleOnMap[$index]"></minicard>
-                </ul>
+            <div class="results-header" ng-if="isViewportFilteringEnabled">
+                Не на карте
             </div>
 
-            <div class="loading-indicator" ng-if="isLoadingNewPage">
-                <i class="fa fa-spin fa-spinner"></i>
-            </div>
+            <ul ng-if="isViewportFilteringEnabled">
+                <minicard ng-hide="isVisibleOnMap[$index]"></minicard>
+            </ul>
+        </div>
 
-            <div class="scroller__track">
-                <div class="scroller__bar"></div>
-            </div>
+        <div class="loading-indicator" ng-if="isLoadingNewPage">
+            <i class="fa fa-spin fa-spinner"></i>
         </div>
     </div>
 </div>
