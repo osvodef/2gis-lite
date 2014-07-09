@@ -11,9 +11,24 @@
             can-load="isPageLoadingEnabled">
 
             <div class="sort-controls clearfix">
-                <button class="button sort-relevance-btn pull-left" ng-click="setSort('relevance')">По релевантности</button>
-                <button class="button sort-name-btn pull-left" ng-click="setSort('name')">по названию</button>
-                <button class="button filter-btn pull-right" ng-click="toggleViewportFiltering()">Видимые на карте</button>
+                <button
+                    class="button sort-relevance-btn pull-left"
+                    ng-click="setSort('relevance')"
+                    ng-class="{active: sort === 'relevance'}">
+                    По релевантности
+                </button>
+                <button
+                    class="button sort-name-btn pull-left"
+                    ng-click="setSort('name')"
+                    ng-class="{active: sort === 'name'}">
+                    по названию
+                </button>
+                <button
+                    class="button filter-btn pull-right"
+                    ng-click="toggleViewportFiltering()"
+                    ng-class="{active: isViewportFilteringEnabled}">
+                    Видимые на карте
+                </button>
             </div>
 
             <div class="filial-list">

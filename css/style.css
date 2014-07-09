@@ -277,9 +277,7 @@ body {
     padding: 10px 20px;
 }
 
-.sort-relevance-btn,
-.sort-name-btn,
-.filter-btn {
+.sort-controls .button {
     height: 25px;
     padding: 0 4px;
     margin: 0;
@@ -290,15 +288,24 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-.sort-relevance-btn {
+.button.sort-relevance-btn {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.sort-name-btn {
+.button.sort-name-btn {
     border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+
+.sort-controls .button:hover {
+    background-color: #eee;
+}
+
+.sort-controls .button.active {
+    background-color: #ddd;
 }
 
 
