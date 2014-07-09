@@ -13,15 +13,15 @@ module.exports = function(grunt) {
                     'bower_components/angular-animate/angular-animate.js',
                     'bower_components/angular-sanitize/angular-sanitize.js',
 
-                    'src/js/app.js',
-                    'src/js/controllers/AppCtrl.js',
-                    'src/js/directives/baronScroller.js',
-                    'src/js/directives/infiniteScroller.js',
-                    'src/js/directives/map.js',
-                    'src/js/directives/minicard.js',
-                    'src/js/directives/sidebar.js',
-                    'src/js/directives/filialList.js',
-                    'src/js/services/apiRequest.js',
+                    'js/app.js',
+                    'js/controllers/AppCtrl.js',
+                    'js/directives/baronScroller.js',
+                    'js/directives/infiniteScroller.js',
+                    'js/directives/map.js',
+                    'js/directives/minicard.js',
+                    'js/directives/sidebar.js',
+                    'js/directives/filialList.js',
+                    'js/services/apiRequest.js',
                 ],
 
                 dest: 'tmp/app.js',
@@ -45,9 +45,9 @@ module.exports = function(grunt) {
             allCss: {
                 files: {
                     'build/css/dglite.min.css' : [
-                        'src/css/reset.css',
+                        'css/reset.css',
                         'bower_components/fontawesome/css/font-awesome.css',
-                        'src/css/style.css',
+                        'css/style.css',
                     ],
                 }
             }
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         processhtml: {
             index: {
                 files: {
-                    'tmp/index.html' : ['src/index.html'],
+                    'tmp/index.html' : ['index.html'],
                 }
             }
         },
@@ -70,9 +70,9 @@ module.exports = function(grunt) {
 
                 files: {
                     'build/index.html' : 'tmp/index.html',
-                    'build/templates/filial-list.html' : 'src/templates/filial-list.html',
-                    'build/templates/minicard.html' : 'src/templates/minicard.html',
-                    'build/templates/sidebar.html' : 'src/templates/sidebar.html',
+                    'build/templates/filial-list.html' : 'templates/filial-list.html',
+                    'build/templates/minicard.html' : 'templates/minicard.html',
+                    'build/templates/sidebar.html' : 'templates/sidebar.html',
                 }
             },
         },

@@ -1,0 +1,13 @@
+<li 
+    class="minicard"
+    ng-repeat="filial in searchResult"
+    ng-mouseenter="setHoverIndex($index)"
+    ng-mouseleave="setHoverIndex(null)"
+    ng-class="{hover: $index === hoverIndex}"
+    ng-click="selectItem($index)">
+
+        <div class="minicard-icon"><i class="fa fa-circle"></i></div>
+        <div class="minicard-name" ng-bind-html="filial.name"></div>
+        <div class="minicard-micro" ng-bind-html="filial.micro_comment"></div>
+        <address class="minicard-address" ng-bind-html="filial.address"></address>
+</li>
